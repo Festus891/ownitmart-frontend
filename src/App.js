@@ -45,10 +45,12 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import OrderLists from "./components/admin/OrderLists";
 import UpdateUser from "./components/admin/UpdateUser";
-import Search from "./components/layouts/Search";
+// import Search from "./components/layouts/Search";
 import About from "./components/pages/About";
 import Service from "./components/pages/Service";
 import Contact from "./components/pages/Contact";
+import ProductMapping from "./components/product/ProductMapping";
+import CategoryPage from "./components/product/CategoryPage";
 
 function App() {
   const { user, loading } = useSelector((state) => state.auth);
@@ -69,10 +71,12 @@ function App() {
         <Headers />
         <HeaderTwo />
 
-        <div className="container container-fluid">
+        <div className="container-fluid">
           <Routes>
             <Route path="/" element={<Home />} exact />
-            <Route path="/search/:keyword" element={<Home />} />
+            <Route path="/product" element={<ProductMapping />} exact />
+            <Route path="/search/:keyword" element={<ProductMapping />} />
+            <Route path="/category/:category" element={<CategoryPage />} />
             <Route path="/product/:id" element={<ProductsDetails />} exact />
             <Route path="/cart" element={<Cart />} exact />
             <Route path="/shipping" element={<Shipping />} exact />

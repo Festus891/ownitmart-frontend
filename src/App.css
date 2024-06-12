@@ -10,6 +10,7 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
+  background-color: beige;
   /* overflow-x: hidden; */
 }
 
@@ -56,7 +57,7 @@ nav .nav-profile Link:hover {
   color: #f38f0b;
 }
 
-/* Home two styling */
+/* HeaderTwo styling */
 .navbar {
   background-color: #fff;
 }
@@ -112,8 +113,75 @@ nav .nav-profile Link:hover {
 }
 
 /* Home page */
+.home_container {
+  background-color: rgba(33, 37, 41, 1);
+  color: #fff;
+  align-content: center;
+  padding: 5px;
+}
+.home_container .home_second_col {
+  background-color: rgba(248, 249, 250, 1);
+}
+
+.row-products-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  position: relative;
+  margin: 0 50px; /* Add margin to make space for the buttons */
+}
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.prev-button {
+  left: 0;
+  margin-left: -10px; /* Adjust to align with the container */
+}
+
+.next-button {
+  right: 0;
+  margin-right: -10px; /* Adjust to align with the container */
+}
+.row-products {
+  gap: 8px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 20px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.home-row-container {
+  background-color: rgba(33, 37, 41, 1);
+  margin-top: 7rem;
+}
+
+.row-products .card {
+  min-width: unset;
+  width: 14rem;
+  transition: transform 0.2s ease;
+}
+
+.row-products .card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.row-products .card .card-body .card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show at most 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 #products_heading {
   margin-top: 1.8rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .card {
@@ -338,6 +406,10 @@ footer .links-heading {
 .plus,
 .minus {
   padding: 0.1rem 0.5rem;
+  background-color: #f38f0b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .stockCounter input::-webkit-outer-spin-button,
@@ -358,12 +430,14 @@ footer .links-heading {
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
-
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .wrapper form {
   padding: 2.5rem 3rem;
+  background-color: rgba(33, 37, 41, 1);
+  color: #eeeeee;
+  border-radius: 4rem;
 }
 
 .wrapper form .btn {
@@ -371,11 +445,16 @@ footer .links-heading {
   border-color: #fa9c23;
   color: white;
   margin-top: 2.5rem;
+  font-weight: bold;
+}
+
+.wrapper form input {
+  font-weight: bold;
 }
 
 .wrapper form a {
   font-size: 0.9rem;
-  color: grey;
+  color: #fa9c23;
 }
 
 /* Avatar */

@@ -135,7 +135,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="text-center  mt-2 mb-0 bg-secondary ">
+        <p className="text-center  mt-2 mb-0 ">
           © OwnitMart Online shopping- All Rights Reserved. Design by Aderibigbe
           Festus
         </p>

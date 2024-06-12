@@ -44,16 +44,22 @@ const Login = () => {
         <div className="row wrapper">
           <div className="col-10 col-lg-5">
             <form className="shadow-lg" onSubmit={submitHandler}>
-              <h4 className="mb-3">Welcome to OwnItMart</h4>
-              <p>
-                Type your e-mail and password to log in or create a new account.
-              </p>
+              <div className="text-center">
+                <img
+                  src="/images/ownit.png"
+                  style={{ width: "4rem" }}
+                  alt="ownit_logo"
+                />
+                <h4 className="mb-3">Welcome to OwnItMart</h4>
+              </div>
+
               <div className="form-group">
                 <label htmlFor="email_field">Email</label>
                 <input
                   type="email"
                   id="email_field"
                   className="form-control"
+                  placeholder="Example@yahoo.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -65,6 +71,7 @@ const Login = () => {
                   type="password"
                   id="password_field"
                   className="form-control"
+                  placeholder="Enter your password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />

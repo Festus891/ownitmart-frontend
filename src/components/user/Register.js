@@ -74,8 +74,15 @@ const Register = () => {
             encType="multipart/form-data"
             onSubmit={submitHandler}
           >
-            <h4 className="mb-3">Welcome to OwnItMart</h4>
-            <p>Create a new Account.</p>
+            <div className="text-center">
+              <img
+                src="/images/ownit.png"
+                style={{ width: "4rem" }}
+                alt="ownit_logo"
+              />
+              <h4 className="mb-3">Welcome to OwnItMart</h4>
+              <p>Create an account with us</p>
+            </div>
 
             <div className="form-group">
               <label htmlFor="email_field">Name</label>
@@ -84,6 +91,7 @@ const Register = () => {
                 id="name_field"
                 className="form-control"
                 name="name"
+                placeholder="Input a username"
                 value={name}
                 onChange={onChange}
               />
@@ -94,6 +102,7 @@ const Register = () => {
               <input
                 type="email"
                 id="email_field"
+                placeholder="Example@yahoo.com"
                 className="form-control"
                 name="email"
                 value={email}
@@ -107,6 +116,7 @@ const Register = () => {
                 type="password"
                 id="password_field"
                 className="form-control"
+                placeholder="Use a strong password"
                 name="password"
                 value={password}
                 onChange={onChange}

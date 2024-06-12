@@ -19,7 +19,7 @@ const Headers = () => {
   };
   return (
     <Fragment>
-      <nav className="d-flex justify-content-around align-items-center  sticky-top">
+      <nav className="d-flex justify-content-around align-items-center ">
         <div className="navbar-brand">
           <Link to="/">
             <img
@@ -62,6 +62,7 @@ const Headers = () => {
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
+                style={{ fontWeight: "bold" }}
               >
                 <figure className="avatar avatar.nav d-flex align-items-center">
                   <img
@@ -70,7 +71,10 @@ const Headers = () => {
                     className="rounded-circle"
                   />
                 </figure>
-                <span className="ml-2 d-none d-lg-block">
+                <span
+                  className="ml-2 d-none d-lg-block"
+                  style={{ fontWeight: "bold" }}
+                >
                   {user && user.name}
                 </span>
                 <i className="fa fa-angle-down ml-2" aria-hidden="true"></i>
@@ -81,20 +85,33 @@ const Headers = () => {
                 aria-labelledby="dropDownMenuButton"
               >
                 {user && user.role === "admin" && (
-                  <Link className="dropdown-item" to="/dashboard">
+                  <Link
+                    className="dropdown-item"
+                    to="/dashboard"
+                    style={{ fontWeight: "bold" }}
+                  >
                     Dashboard
                   </Link>
                 )}
-                <Link className="dropdown-item" to="/orders/me">
+                <Link
+                  className="dropdown-item"
+                  to="/orders/me"
+                  style={{ fontWeight: "bold" }}
+                >
                   My Orders
                 </Link>
-                <Link className="dropdown-item text-danger" to="/me">
+                <Link
+                  className="dropdown-item text-danger"
+                  to="/me"
+                  style={{ fontWeight: "bold" }}
+                >
                   Profile
                 </Link>
                 <Link
                   className="dropdown-item text-danger"
                   to="/"
                   onClick={logoutHandler}
+                  style={{ fontWeight: "bold" }}
                 >
                   Logout
                 </Link>
@@ -117,7 +134,11 @@ const Headers = () => {
                       className="fas fa-user pt-1  "
                       style={{ color: "black" }}
                     ></i>
-                    <span id="cart" className="ml-2 d-none d-lg-block">
+                    <span
+                      id="cart"
+                      className="ml-2 d-none d-lg-block"
+                      style={{ fontWeight: "bold" }}
+                    >
                       Account
                     </span>
                     <i className="fa fa-angle-down ml-2" aria-hidden="true"></i>
@@ -127,7 +148,11 @@ const Headers = () => {
                     className="dropdown-menu dropdown-menu-righ"
                     aria-labelledby="dropdownMenuLink"
                   >
-                    <Link className="dropdown-item" to="#">
+                    <Link
+                      className="dropdown-item"
+                      to="#"
+                      style={{ fontWeight: "bold" }}
+                    >
                       <i className="fas fa-user pt-1"></i>
                       <span id="cart" className="ml-2">
                         My Account
@@ -135,7 +160,7 @@ const Headers = () => {
                     </Link>
                     <Link
                       to="/cart"
-                      style={{ textDecoration: "none" }}
+                      style={{ textDecoration: "none", fontWeight: "bold" }}
                       className=" dropdown-item d-flex"
                     >
                       <i
@@ -148,7 +173,7 @@ const Headers = () => {
                     </Link>
                     <Link
                       to="/cart"
-                      style={{ textDecoration: "none" }}
+                      style={{ textDecoration: "none", fontWeight: "bold" }}
                       className=" dropdown-item d-flex"
                     >
                       <i class="fas fa-box"></i>
@@ -164,10 +189,15 @@ const Headers = () => {
                         margin: "6px",
                         borderRadius: "8px",
                         width: "10rem",
+                        fontWeight: "bold",
                       }}
                       className=" dropdown-item d-flex shadow "
                     >
-                      <button type="button" className="btn">
+                      <button
+                        type="button"
+                        className="btn"
+                        style={{ fontWeight: "bold", color: "#fff" }}
+                      >
                         SIGN IN
                       </button>
                     </Link>
@@ -179,10 +209,15 @@ const Headers = () => {
                         margin: "6px",
                         borderRadius: "8px",
                         width: "10rem",
+                        fontWeight: "bold",
                       }}
                       className=" dropdown-item d-flex shadow "
                     >
-                      <button type="button" className="btn">
+                      <button
+                        type="button"
+                        className="btn"
+                        style={{ fontWeight: "bold", color: "#fff" }}
+                      >
                         REGISTER
                       </button>
                     </Link>
